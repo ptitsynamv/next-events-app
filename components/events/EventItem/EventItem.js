@@ -1,8 +1,8 @@
 import s from './EventItem.module.css';
-import Button from '../Button/Button';
-import DateIcon from '../icons/DateIcon/DateIcon';
-import AddressIcon from '../icons/AddressIcon/AddressIcon';
-import ArrowRightIcon from '../icons/ArrowRightIcon/ArrowRightIcon';
+import Button from '../../ui/Button/Button';
+import DateIcon from '../../icons/DateIcon/DateIcon';
+import AddressIcon from '../../icons/AddressIcon/AddressIcon';
+import ArrowRightIcon from '../../icons/ArrowRightIcon/ArrowRightIcon';
 
 function EventItem(props) {
   const { title, image, date, location, id, description } = props;
