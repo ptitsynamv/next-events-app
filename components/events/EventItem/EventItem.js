@@ -3,6 +3,7 @@ import Button from '../../ui/Button/Button';
 import DateIcon from '../../icons/DateIcon/DateIcon';
 import AddressIcon from '../../icons/AddressIcon/AddressIcon';
 import ArrowRightIcon from '../../icons/ArrowRightIcon/ArrowRightIcon';
+import Image from 'next/image';
 
 function EventItem(props) {
   const { title, image, date, location, id, description } = props;
@@ -17,7 +18,7 @@ function EventItem(props) {
 
   return (
     <li className={s.item}>
-      <img src={`/${image}`} alt={description} />
+      <Image src={`/${image}`} alt={title} width={250} height={160} />
       <div className={s.content}>
         <div className={s.summary}>
           <h2>{title}</h2>

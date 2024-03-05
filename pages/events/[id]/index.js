@@ -3,6 +3,7 @@ import EventSummary from '../../../components/event-detail/EventSummary/EventSum
 import EventLogistics from '../../../components/event-detail/EventLogistics/EventLogistics';
 import EventContent from '../../../components/event-detail/EventContent/EventContent';
 import { getFeaturedEvents, getEventById } from '../../../helpers/api-utils';
+import Head from 'next/head';
 
 export default function EventsDetailPage({ eventDetails }) {
   if (!eventDetails) {
@@ -15,6 +16,10 @@ export default function EventsDetailPage({ eventDetails }) {
 
   return (
     <Fragment>
+      <Head>
+        <title>{eventDetails.title}</title>
+        <meta name="description" content={eventDetails.description}></meta>
+      </Head>
       <EventSummary title={eventDetails.title} />
       <EventLogistics
         date={eventDetails.date}
