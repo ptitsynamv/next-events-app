@@ -37,25 +37,21 @@
       "text": "comment\n"
     },
     {
-      "id": "70cb",
+      "id": "c32a",
       "eventId": "e2",
       "email": "test2@mail.com",
       "name": "name 2",
       "text": "comment 2"
     },
     {
-      "id": "d787",
-      "eventId": "e1",
-      "email": "test3@mail.com",
-      "name": "name 3",
-      "text": "comment 3"
+      "id": "b302",
+      "eventId": "e2",
+      "email": "test2@mail.com",
+      "name": "name 2",
+      "text": "comment 2"
     }
   ],
   "emails": [
-    {
-      "id": "1cbe",
-      "email": "www@mail.com"
-    },
     {
       "id": "f515",
       "email": "test1@mail.com"

@@ -1,17 +1,20 @@
 import classes from './comment-list.module.css';
 
-function CommentList({ commentList = [] }) {
+function CommentList({ commentList = [], isLoading }) {
   return (
-    <ul className={classes.comments}>
-      {commentList.map((comment) => (
-        <li key={comment.id}>
-          <p>{comment.text}</p>
-          <div>
-            By <address>{comment.name}</address>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <>
+      {isLoading && <p>Loading...</p>}
+      <ul className={classes.comments}>
+        {commentList.map((comment) => (
+          <li key={comment.id}>
+            <p>{comment.text}</p>
+            <div>
+              By <address>{comment.name}</address>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 
