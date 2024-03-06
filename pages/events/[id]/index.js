@@ -4,6 +4,7 @@ import EventLogistics from '../../../components/event-detail/EventLogistics/Even
 import EventContent from '../../../components/event-detail/EventContent/EventContent';
 import { getFeaturedEvents, getEventById } from '../../../helpers/api-utils';
 import Head from 'next/head';
+import Comments from '../../../components/input/comments';
 
 export default function EventsDetailPage({ eventDetails }) {
   if (!eventDetails) {
@@ -30,6 +31,7 @@ export default function EventsDetailPage({ eventDetails }) {
       <EventContent>
         <p>{eventDetails.description}</p>
       </EventContent>
+      <Comments eventId={eventDetails.id} />
     </Fragment>
   );
 }
