@@ -11,10 +11,12 @@ function Comments(props) {
   const [commentList, setCommentList] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/comment/${eventId}`)
-      .then((req) => req.json())
-      .then((data) => setCommentList(data));
-  }, []);
+    if (showComments) {
+      fetch(`/api/comment/${eventId}`)
+        .then((req) => req.json())
+        .then(({ comments }) => setCommentList(comments));
+    }
+  }, [showComments]);
 
   function toggleCommentsHandler() {
     setShowComments((prevStatus) => !prevStatus);
